@@ -15,6 +15,7 @@
       width: 800px;
       height: 600px;
       overflow: hidden;
+      position: relative;
     }
 
     iframe {
@@ -22,9 +23,52 @@
       height: 100%;
       border: none;
     }
+
+    .loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: Arial, sans-serif;
+      color: white;
+      z-index: 1000;
+    }
+
+    .loading.hidden {
+      display: none;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .loading-text {
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
-  <iframe src="https://imgbed.cn/" allowfullscreen></iframe>
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    <div class="loading-text">正在加载 imgbed.cn...</div>
+  </div>
+  <iframe src="https://imgbed.cn/" allowfullscreen id="iframe"></iframe>
+  <script src="popup.js"></script>
 </body>
 </html>
