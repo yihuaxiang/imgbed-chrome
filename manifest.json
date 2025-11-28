@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "图床助手 - imgbed.cn",
+  "name": "图床小镇助手（免费图床）",
   "version": "1.0.0",
   "description": "快速访问 imgbed.cn 图床，方便上传和管理图片",
   "action": {
