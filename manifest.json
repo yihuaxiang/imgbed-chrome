@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "图床助手 - imgbed.cn",
+  "version": "1.0.0",
+  "description": "快速访问 imgbed.cn 图床，方便上传和管理图片",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": []
+}
